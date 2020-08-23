@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "B312-939 Admin Tool",
+	"description": "Band Selection and Antenna Settings without an Admin Access by Chris Laconsay",
+	"version": "1.0",
+	"icons": { 
+		"16": "img/logo-16.png",
+		"48": "img/logo-48.png",
+		"128": "img/logo-128.png" 
+	},
+	"browser_action": {
+		"default_icon": {                    
+			"19": "img/logo-19.png",          
+			"38": "img/logo-48.png"          
+		},
+		"default_popup": "popup.html"
+	},
+	"permissions": ["http://192.168.254.254/"],
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"web_accessible_resources": [
+		"img/icon128.png"
+	]
+}

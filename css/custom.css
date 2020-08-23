@@ -1,0 +1,24 @@
+body{width:380px;}
+.btn:hover{
+	color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;}
+.donate{font-size:11px;}
+.credit{font-weight:bold;}
+.alert{margin-top:10px;display: none;}
+.loader{margin-top:10px}
+.col-form-label{font-weight: bold}
+.progress{height: 90%;background-color: #4f5c69;position: relative;}
+.progress .grade{color:#fff;position: absolute;z-index: 1; padding: 3px 10px;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.bar-excellent{background-color: #139013;}
+.bar-good{background-color: #8dca15;}
+.bar-average{background-color:#f7780c;}
+.bar-poor{background-color: #f51b1b;}
+#connection{display: inline-block;margin-left: 10px;}
+#connection svg{vertical-align: initial;fill: #4f5c69;margin-left: 10px;}
+#connection svg.online{fill:#549031;}
+#connection svg.offline{fill:#ec3809;}
+#modem-tab .active .nav-link{
+	background-color: #007bff;
+	color: #fff;
+}

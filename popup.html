@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Band Selection and Antenna Settings without an Admin Access by Chris Laconsay">
+      <meta name="author" content="Chris Laconsay">
+      <title>B312-939 Admin Tool</title>
+      <!-- Scripts -->
+      <script src="js/jquery-2.0.3.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- Cascading Style Sheets -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link href="css/bootstrap-grid.min.css" rel="stylesheet" media="screen">
+      <link href="css/custom.css" rel="stylesheet" media="screen">
+
+   </head>
+   <body>
+      <nav class="navbar navbar-default" role="navigation">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="img/logo-38.png" class="align-bottom" /> B312-939 Admin Tool</a>       
+            <div id="connection">
+	            <svg id="router" class="offline" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512" width="20" role="img" aria-labelledby="Connection Status" xmlns="http://www.w3.org/2000/svg"><title>Disconnected</title><g><path d="m467 285.5h-38.252l81.039-189.091c3.264-7.614-.264-16.433-7.878-19.696s-16.433.264-19.696 7.878l-86.104 200.909h-280.218l-86.104-200.909c-3.263-7.614-12.08-11.143-19.696-7.878-7.614 3.263-11.141 12.081-7.878 19.696l81.039 189.091h-38.252c-24.813 0-45 20.187-45 45v90c0 24.813 20.187 45 45 45h16v16c0 8.284 6.716 15 15 15s15-6.716 15-15v-16h330v16c0 8.284 6.716 15 15 15s15-6.716 15-15v-16h16c24.813 0 45-20.187 45-45v-90c0-24.813-20.187-45-45-45zm15 135c0 8.271-6.729 15-15 15h-422c-8.271 0-15-6.729-15-15v-90c0-8.271 6.729-15 15-15h422c8.271 0 15 6.729 15 15z"/><path d="m224.241 208.697c-5.858 5.858-5.858 15.355 0 21.213 5.857 5.858 15.355 5.858 21.213 0 1.647-1.647 5.208-4.41 10.546-4.41s8.898 2.763 10.546 4.41c5.857 5.858 15.355 5.859 21.213 0 5.858-5.858 5.858-15.355 0-21.213-4.929-4.928-15.609-13.197-31.759-13.197s-26.83 8.269-31.759 13.197z"/><path d="m118.104 102.685c36.85-36.876 85.822-57.185 137.896-57.185s101.046 20.309 137.896 57.185c5.852 5.858 15.35 5.866 21.213.008 5.86-5.855 5.863-15.353.008-21.213-42.516-42.548-99.025-65.98-159.117-65.98s-116.6 23.432-159.116 65.979c-5.856 5.86-5.853 15.357.008 21.213 5.859 5.856 15.358 5.852 21.212-.007z"/><path d="m372.656 145.101c5.86-5.854 5.865-15.352.011-21.213-31.172-31.203-72.604-48.388-116.667-48.388s-85.496 17.185-116.667 48.388c-5.854 5.861-5.85 15.358.011 21.213s15.359 5.85 21.213-.011c25.503-25.53 59.399-39.59 95.442-39.59s69.938 14.06 95.442 39.59c5.853 5.858 15.349 5.87 21.215.011z"/><path d="m330.218 187.496c5.858-5.858 5.858-15.355 0-21.213-19.851-19.851-46.209-30.783-74.218-30.783s-54.367 10.932-74.217 30.783c-5.858 5.858-5.858 15.355 0 21.213 5.857 5.858 15.355 5.859 21.213 0 14.184-14.184 33.008-21.996 53.004-21.996s38.82 7.812 53.005 21.996c5.857 5.858 15.355 5.858 21.213 0z"/><path d="m316 345.5c-8.284 0-15 6.716-15 15v30c0 8.284 6.716 15 15 15s15-6.716 15-15v-30c0-8.284-6.716-15-15-15z"/><path d="m376 345.5c-8.284 0-15 6.716-15 15v30c0 8.284 6.716 15 15 15s15-6.716 15-15v-30c0-8.284-6.716-15-15-15z"/><path d="m436 345.5c-8.284 0-15 6.716-15 15v30c0 8.284 6.716 15 15 15s15-6.716 15-15v-30c0-8.284-6.716-15-15-15z"/></g>
+	            </svg>
+
+	            <svg class="offline" id="user" height="20" width="20" enable-background="new 0 0 50 50"  version="1.1" viewBox="0 0 50 50" role="img" aria-labelledby="Log-in Status" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Logged-out</title><rect fill="none" height="50" width="50"/><path d="M30.933,32.528c-0.146-1.612-0.09-2.737-0.09-4.21c0.73-0.383,2.038-2.825,2.259-4.888c0.574-0.047,1.479-0.607,1.744-2.818  c0.143-1.187-0.425-1.855-0.771-2.065c0.934-2.809,2.874-11.499-3.588-12.397c-0.665-1.168-2.368-1.759-4.581-1.759  c-8.854,0.163-9.922,6.686-7.981,14.156c-0.345,0.21-0.913,0.878-0.771,2.065c0.266,2.211,1.17,2.771,1.744,2.818  c0.22,2.062,1.58,4.505,2.312,4.888c0,1.473,0.055,2.598-0.091,4.21C19.367,37.238,7.546,35.916,7,45h38  C44.455,35.916,32.685,37.238,30.933,32.528z"/></svg>
+        	</div>
+         </div>
+      </nav>
+      <div class="container-fluid">     		
+			 <!-- Settings -->
+            <div class="tab-pane active" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+               <section>
+                  <form id="form-band">
+                     <div class="form-group">
+                        <label class="col-sm-2 col-form-label">LTE Band</label>
+                        <div class="col-sm-10">
+                           <button class="btn" value="7FFFFFFFFFFFFFFF">Auto</button>
+                           <button class="btn" value="4">3</button>
+                           <button class="btn" value="8000000">28</button>
+                           <button class="btn" value="8000000000">40</button>
+                           <button class="btn" value="10000000000">41</button>
+                        </div>
+                        <div class="text-center fade show loader" style="display: none">
+                           <div class="spinner-border text-info" role="status">
+                              <span class="sr-only">Loading...</span>
+                           </div>
+                        </div>
+                        <hr class="separator">
+                     </div>
+                  </form>
+               </section>
+               <section>
+                  <form id="form-antenna">
+                     <div class="form-group">
+                        <label class="col-sm-2 col-form-label">Antenna Settings</label>
+                        <div class="col-sm-10">
+                           <button type="submit" class="btn" value="0">Auto</button>
+                           <button type="submit" class="btn" value="2">Internal</button>
+                           <button type="submit" class="btn" value="1">External</button>
+                        </div>
+                        <div class="text-center fade show loader" style="display: none">
+                           <div class="spinner-border text-info" role="status">
+                              <span class="sr-only">Loading...</span>
+                           </div>
+                        </div>
+                        
+                     </div>
+                  </form>
+                  <hr class="separator">
+                        <!-- alert message -->
+                        <div id="general-alert" class="alert alert-primary fade show" role="alert">
+                           <strong class="alert-text">Band successfuly updated.</strong>
+                           <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+                           <span aria-hidden="true">&times;</span></a>
+                        </div>
+                        <!-- end alert message -->  
+               </section>
+               <section class="signal-info">
+               	     <div class="row">
+               	      <div class="col-2">Band</div>
+                     <div class="col-3">
+                        <strong id="band" class="grade">Unknown</strong>
+                     </div>	
+
+                     <div class="col-3">Antenna</div>
+                     <div class="col-4">
+                        <strong id="antenna" class="grade">Unknown</strong>
+                     </div>                    
+                  </div>
+                  <div class="row">   
+                  	 <div class="col-2">PCI</div>
+                     <div class="col-3">
+                        <strong id="pci" class="grade">000</strong>
+                     </div>                  
+                      <div class="col-3">Cell ID</div>
+                     <div class="col-4">
+                        <strong id="cellid" class="grade">000000-000</strong>
+                     </div>
+                     
+                  </div>
+                  <hr class="separator">
+                  <div id="rsrp" class="row">
+                     <div class="col-3">RSRP</div>
+                     <div class="col-6">
+                        <div class="progress">
+                           <strong class="grade">0dBm</strong>
+                           <div class="progress-bar" role="progressbar"></div>
+                        </div>
+                     </div>
+                     <div class="col-3 txt-rate">Unknown</div>
+                  </div>
+                  <div id="rsrq" class="row">
+                     <div class="col-3">RSRQ</div>
+                     <div class="col-6">
+                        <div class="progress">
+                           <strong class="grade">0dB</strong>
+                           <div class="progress-bar" role="progressbar"></div>
+                        </div>
+                     </div>
+                     <div class="col-3 txt-rate">Unknown</div>
+                  </div>
+                  <div id="sinr" class="row">
+                     <div class="col-3">SINR</div>
+                     <div class="col-6">
+                        <div class="progress">
+                           <strong class="grade">0dB</strong>
+                           <div class="progress-bar" role="progressbar"></div>
+                        </div>
+                     </div>
+                     <div class="col-3 txt-rate">Unknown</div>
+                  </div>
+               </section>
+            </div>
+            <!-- end Settings -->	     
+         <hr class="separator">
+         <p class="credit text-center">© Chris Laconsay</p>
+      </div>
+   </body>
+</html>
