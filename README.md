@@ -1,4 +1,4 @@
-![alt text](https://ibb.co/yNhPKV2)
+![v1 Screenshot](https://github.com/claconsay/adminer/blob/master/sv1.png?raw=true)
 
 # B312-939 Admin Tool
 A chrome extension that let users manually set the band and antenna settings of Huawei B312-939 modem without the need of admin access. 
