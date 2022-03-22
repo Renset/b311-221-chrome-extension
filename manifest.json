@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "B312-939 Admin Tool",
 	"description": "Band Selection and Antenna Settings without an Admin Access by Chris Laconsay",
 	"version": "1.0",
