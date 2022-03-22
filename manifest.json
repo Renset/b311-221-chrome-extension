@@ -8,16 +8,12 @@
 		"48": "img/logo-48.png",
 		"128": "img/logo-128.png" 
 	},
-	"browser_action": {
+	"action": {
 		"default_icon": {                    
 			"19": "img/logo-19.png",          
 			"38": "img/logo-48.png"          
 		},
 		"default_popup": "popup.html"
 	},
-	"permissions": ["http://192.168.254.254/"],
-	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-	"web_accessible_resources": [
-		"img/icon128.png"
-	]
+	"host_permissions": ["http://192.168.254.254/"]
 }
