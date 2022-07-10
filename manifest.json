@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
-	"name": "B312-939 Admin Tool",
-	"description": "Band Selection and Antenna Settings without an Admin Access by Chris Laconsay",
+	"name": "B311-221 Admin Tool",
+	"description": "Band Selection and Antenna Settings without an Admin Access by Renat Notfullin. Original extension by Chris Laconsay",
 	"version": "1.0",
 	"icons": { 
 		"16": "img/logo-16.png",
@@ -15,5 +15,5 @@
 		},
 		"default_popup": "popup.html"
 	},
-	"host_permissions": ["http://192.168.254.254/"]
+	"host_permissions": ["http://192.168.8.1/"]
 }

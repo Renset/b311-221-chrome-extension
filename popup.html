@@ -2,9 +2,9 @@
 <html>
    <head>
       <meta charset="utf-8">
-      <meta name="description" content="Band Selection and Antenna Settings without an Admin Access by Chris Laconsay">
-      <meta name="author" content="Chris Laconsay">
-      <title>B312-939 Admin Tool</title>
+      <meta name="description" content="Band Selection and Antenna Settings without an Admin Access by Renat Notfullin. Original extension by Chris Laconsay">
+      <meta name="author" content="Renat Notfullin">
+      <title>B311-221 Admin Tool</title>
       <!-- Scripts -->
       <script src="js/jquery-2.0.3.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
@@ -18,7 +18,7 @@
    <body>
       <nav class="navbar navbar-default" role="navigation">
          <div class="navbar-header">
-            <a class="navbar-brand" href="https://github.com/claconsay/adminer" target="_blank"><img src="img/logo-38.png" class="align-bottom" /> B312-939 Admin Tool</a>       
+            <a class="navbar-brand" href="https://github.com/claconsay/adminer" target="_blank"><img src="img/logo-38.png" class="align-bottom" /> B311-221 Admin Tool</a>       
             <div id="connection">
 	            <svg id="router" class="offline" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512" width="20" role="img" aria-labelledby="Connection Status" xmlns="http://www.w3.org/2000/svg"><title>Disconnected</title><g><path d="m467 285.5h-38.252l81.039-189.091c3.264-7.614-.264-16.433-7.878-19.696s-16.433.264-19.696 7.878l-86.104 200.909h-280.218l-86.104-200.909c-3.263-7.614-12.08-11.143-19.696-7.878-7.614 3.263-11.141 12.081-7.878 19.696l81.039 189.091h-38.252c-24.813 0-45 20.187-45 45v90c0 24.813 20.187 45 45 45h16v16c0 8.284 6.716 15 15 15s15-6.716 15-15v-16h330v16c0 8.284 6.716 15 15 15s15-6.716 15-15v-16h16c24.813 0 45-20.187 45-45v-90c0-24.813-20.187-45-45-45zm15 135c0 8.271-6.729 15-15 15h-422c-8.271 0-15-6.729-15-15v-90c0-8.271 6.729-15 15-15h422c8.271 0 15 6.729 15 15z"/><path d="m224.241 208.697c-5.858 5.858-5.858 15.355 0 21.213 5.857 5.858 15.355 5.858 21.213 0 1.647-1.647 5.208-4.41 10.546-4.41s8.898 2.763 10.546 4.41c5.857 5.858 15.355 5.859 21.213 0 5.858-5.858 5.858-15.355 0-21.213-4.929-4.928-15.609-13.197-31.759-13.197s-26.83 8.269-31.759 13.197z"/><path d="m118.104 102.685c36.85-36.876 85.822-57.185 137.896-57.185s101.046 20.309 137.896 57.185c5.852 5.858 15.35 5.866 21.213.008 5.86-5.855 5.863-15.353.008-21.213-42.516-42.548-99.025-65.98-159.117-65.98s-116.6 23.432-159.116 65.979c-5.856 5.86-5.853 15.357.008 21.213 5.859 5.856 15.358 5.852 21.212-.007z"/><path d="m372.656 145.101c5.86-5.854 5.865-15.352.011-21.213-31.172-31.203-72.604-48.388-116.667-48.388s-85.496 17.185-116.667 48.388c-5.854 5.861-5.85 15.358.011 21.213s15.359 5.85 21.213-.011c25.503-25.53 59.399-39.59 95.442-39.59s69.938 14.06 95.442 39.59c5.853 5.858 15.349 5.87 21.215.011z"/><path d="m330.218 187.496c5.858-5.858 5.858-15.355 0-21.213-19.851-19.851-46.209-30.783-74.218-30.783s-54.367 10.932-74.217 30.783c-5.858 5.858-5.858 15.355 0 21.213 5.857 5.858 15.355 5.859 21.213 0 14.184-14.184 33.008-21.996 53.004-21.996s38.82 7.812 53.005 21.996c5.857 5.858 15.355 5.858 21.213 0z"/><path d="m316 345.5c-8.284 0-15 6.716-15 15v30c0 8.284 6.716 15 15 15s15-6.716 15-15v-30c0-8.284-6.716-15-15-15z"/><path d="m376 345.5c-8.284 0-15 6.716-15 15v30c0 8.284 6.716 15 15 15s15-6.716 15-15v-30c0-8.284-6.716-15-15-15z"/><path d="m436 345.5c-8.284 0-15 6.716-15 15v30c0 8.284 6.716 15 15 15s15-6.716 15-15v-30c0-8.284-6.716-15-15-15z"/></g>
 	            </svg>
@@ -36,10 +36,12 @@
                         <label class="col-sm-2 col-form-label">LTE Band</label>
                         <div class="col-sm-10">
                            <button class="btn" value="7FFFFFFFFFFFFFFF">Auto</button>
+                           <button class="btn" value="1">1</button>
                            <button class="btn" value="4">3</button>
-                           <button class="btn" value="8000000">28</button>
-                           <button class="btn" value="8000000000">40</button>
-                           <button class="btn" value="10000000000">41</button>
+                           <button class="btn" value="40">7</button>
+                           <button class="btn" value="80">8</button>
+                           <button class="btn" value="80000">20</button>
+                           <button class="btn" value="2000000000">38</button>
                         </div>
                         <div class="text-center fade show loader" style="display: none">
                            <div class="spinner-border text-info" role="status">
@@ -134,7 +136,7 @@
             </div>
             <!-- end Settings -->	     
          <hr class="separator">
-         <p class="credit text-center">© Chris Laconsay</p>
+         <p class="credit text-center">© Renat Notfullin & Chris Laconsay</p>
       </div>
    </body>
 </html>

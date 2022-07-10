@@ -1,5 +1,5 @@
 $(function() {
-    var api = "http://192.168.254.254/api/";
+    var api = "http://192.168.8.1/api/";
     var xml = '<?xml version="1.0" encoding="UTF-8"?><request>';
 
     var getAjax = function(resource) {
