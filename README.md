@@ -1,6 +1,6 @@
 # B311-221 Admin Tool
 
-<img width="548" alt="CleanShot 2022-07-13 at 17 00 37@2x" src="https://user-images.githubusercontent.com/364877/178752191-8db652cc-b73e-4f5a-8cea-c99bf4fbd65d.png">
+<img width="576" alt="CleanShot 2022-07-15 at 23 37 58@2x" src="https://user-images.githubusercontent.com/364877/179307082-fe1387cf-e384-49ba-89dc-93e6117af618.png">
 
 | WARNING: once signed in to router, the extension keeps you logged in while Chrome is open |
 | --- |
