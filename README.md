@@ -8,7 +8,7 @@
 A Chrome extension that let you manually set the band and antenna settings of Huawei B311-221 router without the need of admin access. This extension is the fork of [Huawei B312-939 Admin Tool by Chris Laconsay](https://github.com/claconsay/adminer).
 
 
-**Installation**
+### Installation
 1. Download [latest version](https://github.com/Renset/b311-221-chrome-extension/archive/refs/heads/master.zip)
 1. Unpack it
 1. In Chrome, open Extensions Manager (chrome://extensions/)
