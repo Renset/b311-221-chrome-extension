@@ -70,6 +70,9 @@ $(function() {
             case "sinr":
                 rate = rateSinr(grade);
                 break;
+            case "rssi":
+                rate = rateRssi(grade);
+                break;
             default:
         }
         return rate;
@@ -106,6 +109,9 @@ $(function() {
                 break;
             case "sinr":
                 percent = getPercentage(grade, 0, 20);
+                break;
+            case "rssi":
+                percent = getPercentage(grade, -110, -40);
                 break;
             default:
         }
@@ -162,6 +168,20 @@ $(function() {
         }
     }
 
+    var rateRssi = function(gradetxt) {
+        var grade = parseInt(gradetxt);
+
+        if (grade >= -65) {
+            return 3;
+        } else if (grade >= -75 && grade <= -65) { //
+            return 2;
+        } else if (grade >= -85 && grade <= -75) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     var updateBand = function(band, token) {
         var resource = "net/net-mode";
         var data = xml + '<NetworkMode>03</NetworkMode><NetworkBand>100000000C680380</NetworkBand><LTEBand>' + band + '</LTEBand></request>';
@@ -183,13 +203,16 @@ $(function() {
             var rsrq = getXML(resp, 'rsrq');
             var rsrp = getXML(resp, 'rsrp');
             var sinr = getXML(resp, 'sinr');
+            var rssi = getXML(resp, 'rssi')
 
             $("#band").text(band);
             $("#pci").text(pci);
             $("#cellid").text(cell_id);
+        
             updateSignal("rsrp", rsrp);
             updateSignal("rsrq", rsrq);
             updateSignal("sinr", sinr);
+            updateSignal("rssi", rssi);
         }).error(function() {
             console.log("Error when updating status.");
         });
@@ -338,9 +361,10 @@ $(function() {
     processAntennaStatus();
     processSignalStatus();
     processLoginStatus();
+
     setInterval(function() {
         processSignalStatus();
         processLoginStatus();
-    }, 10000);
+    }, 5000);
 
 });

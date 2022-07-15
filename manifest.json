@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "B311-221 Admin Tool",
 	"description": "Band Selection and Antenna Settings without an Admin Access by Renat Notfullin. Original extension by Chris Laconsay",
-	"version": "1.0",
+	"version": "2.0",
 	"icons": { 
 		"16": "img/logo-16.png",
 		"48": "img/logo-48.png",
@@ -15,5 +15,9 @@
 		},
 		"default_popup": "popup.html"
 	},
-	"host_permissions": ["http://192.168.8.1/"]
+	"background": {
+		"service_worker": "js/background.js"
+	},
+	"host_permissions": ["http://192.168.8.1/"],
+	"permissions": ["background", "alarms"]
 }

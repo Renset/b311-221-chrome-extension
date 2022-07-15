@@ -2,6 +2,9 @@
 
 <img width="548" alt="CleanShot 2022-07-13 at 17 00 37@2x" src="https://user-images.githubusercontent.com/364877/178752191-8db652cc-b73e-4f5a-8cea-c99bf4fbd65d.png">
 
+| WARNING: once signed in to router, the extension keeps you logged in while Chrome is open |
+| --- |
+
 A Chrome extension that let you manually set the band and antenna settings of Huawei B311-221 router without the need of admin access. This extension is the fork of [Huawei B312-939 Admin Tool by Chris Laconsay](https://github.com/claconsay/adminer).
 
 
@@ -18,7 +21,7 @@ A Chrome extension that let you manually set the band and antenna settings of Hu
     <img width="548" alt="Chrome Interface" src="https://user-images.githubusercontent.com/364877/178160838-566fb365-05e0-47f5-a737-84f74a604335.png">
 
 ### How-to use: 
-1. Follow the installation video to install the tool.
+1. Follow the installation steps to install the tool.
 1. Login to the router (192.168.8.1) using the user account.
 1. The Router and User icons that appear at the top of the tool must be both green.
 1. Using the tool, test each band one at a time. Speed test each band change until you get the strongest band in your area.
