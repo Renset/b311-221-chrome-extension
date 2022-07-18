@@ -2,9 +2,6 @@
 
 <img width="576" alt="CleanShot 2022-07-15 at 23 37 58@2x" src="https://user-images.githubusercontent.com/364877/179307082-fe1387cf-e384-49ba-89dc-93e6117af618.png">
 
-| WARNING: once signed in to router, the extension keeps you logged in while Chrome is open |
-| --- |
-
 A Chrome extension that let you manually set the band and antenna settings of Huawei B311-221 router without the need of admin access. This extension is the fork of [Huawei B312-939 Admin Tool by Chris Laconsay](https://github.com/claconsay/adminer).
 
 
